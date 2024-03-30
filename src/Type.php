@@ -36,7 +36,7 @@ final readonly class Type
     public function as(string $type): mixed
     {
         if (! is_object($this->variable) || ! $this->variable instanceof $type) {
-            throw new TypeError('Variable is not a ['.$type.'].');
+            throw new TypeError("Variable is not a [{$type}].");
         }
 
         return $this->variable;
